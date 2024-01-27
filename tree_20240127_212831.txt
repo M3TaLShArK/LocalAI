@@ -1,0 +1,832 @@
+.
+├── ./.dockerignore
+├── ./.env
+├── ./.git
+│   ├── ./.git/FETCH_HEAD
+│   ├── ./.git/HEAD
+│   ├── ./.git/branches
+│   ├── ./.git/config
+│   ├── ./.git/description
+│   ├── ./.git/hooks
+│   │   ├── ./.git/hooks/applypatch-msg.sample
+│   │   ├── ./.git/hooks/commit-msg.sample
+│   │   ├── ./.git/hooks/fsmonitor-watchman.sample
+│   │   ├── ./.git/hooks/post-commit
+│   │   ├── ./.git/hooks/post-update.sample
+│   │   ├── ./.git/hooks/pre-applypatch.sample
+│   │   ├── ./.git/hooks/pre-commit.sample
+│   │   ├── ./.git/hooks/pre-merge-commit.sample
+│   │   ├── ./.git/hooks/pre-push.sample
+│   │   ├── ./.git/hooks/pre-rebase.sample
+│   │   ├── ./.git/hooks/pre-receive.sample
+│   │   ├── ./.git/hooks/prepare-commit-msg.sample
+│   │   ├── ./.git/hooks/push-to-checkout.sample
+│   │   └── ./.git/hooks/update.sample
+│   ├── ./.git/index
+│   ├── ./.git/info
+│   │   └── ./.git/info/exclude
+│   ├── ./.git/lfs
+│   │   └── ./.git/lfs/tmp
+│   ├── ./.git/logs
+│   │   ├── ./.git/logs/HEAD
+│   │   └── ./.git/logs/refs
+│   │       ├── ./.git/logs/refs/heads
+│   │       │   └── ./.git/logs/refs/heads/master
+│   │       └── ./.git/logs/refs/remotes
+│   │           └── ./.git/logs/refs/remotes/origin
+│   │               ├── ./.git/logs/refs/remotes/origin/HEAD
+│   │               ├── ./.git/logs/refs/remotes/origin/add
+│   │               │   └── ./.git/logs/refs/remotes/origin/add/first-example
+│   │               ├── ./.git/logs/refs/remotes/origin/agent
+│   │               ├── ./.git/logs/refs/remotes/origin/ci_images
+│   │               ├── ./.git/logs/refs/remotes/origin/docs_upd_2
+│   │               ├── ./.git/logs/refs/remotes/origin/enable_gpu
+│   │               ├── ./.git/logs/refs/remotes/origin/examples_update
+│   │               ├── ./.git/logs/refs/remotes/origin/exllama-share
+│   │               ├── ./.git/logs/refs/remotes/origin/gh-pages
+│   │               ├── ./.git/logs/refs/remotes/origin/grpcresult
+│   │               ├── ./.git/logs/refs/remotes/origin/img2vid
+│   │               ├── ./.git/logs/refs/remotes/origin/mudler-patch-1
+│   │               ├── ./.git/logs/refs/remotes/origin/mudler-patch-2
+│   │               ├── ./.git/logs/refs/remotes/origin/remote_lib
+│   │               ├── ./.git/logs/refs/remotes/origin/renovate
+│   │               │   ├── ./.git/logs/refs/remotes/origin/renovate/github.com-ggerganov-whisper.cpp-bindings-go-digest
+│   │               │   ├── ./.git/logs/refs/remotes/origin/renovate/github.com-google-uuid-1.x
+│   │               │   ├── ./.git/logs/refs/remotes/origin/renovate/github.com-nomic-ai-gpt4all-gpt4all-bindings-golang-digest
+│   │               │   ├── ./.git/logs/refs/remotes/origin/renovate/github.com-onsi-gomega-1.x
+│   │               │   └── ./.git/logs/refs/remotes/origin/renovate/github.com-tmc-langchaingo-digest
+│   │               ├── ./.git/logs/refs/remotes/origin/swagger
+│   │               ├── ./.git/logs/refs/remotes/origin/swagger2
+│   │               ├── ./.git/logs/refs/remotes/origin/token_berts
+│   │               └── ./.git/logs/refs/remotes/origin/try_gha_runners
+│   ├── ./.git/objects
+│   │   ├── ./.git/objects/info
+│   │   └── ./.git/objects/pack
+│   │       ├── ./.git/objects/pack/pack-434512b8222ebff487a7d70d62fbd702f9e0ebf9.idx
+│   │       ├── ./.git/objects/pack/pack-434512b8222ebff487a7d70d62fbd702f9e0ebf9.pack
+│   │       ├── ./.git/objects/pack/pack-a339b9508a44bd4fd07e3e6751424664b3fb25a9.idx
+│   │       └── ./.git/objects/pack/pack-a339b9508a44bd4fd07e3e6751424664b3fb25a9.pack
+│   ├── ./.git/packed-refs
+│   └── ./.git/refs
+│       ├── ./.git/refs/heads
+│       │   └── ./.git/refs/heads/master
+│       ├── ./.git/refs/remotes
+│       │   └── ./.git/refs/remotes/origin
+│       │       ├── ./.git/refs/remotes/origin/HEAD
+│       │       ├── ./.git/refs/remotes/origin/add
+│       │       │   └── ./.git/refs/remotes/origin/add/first-example
+│       │       ├── ./.git/refs/remotes/origin/agent
+│       │       ├── ./.git/refs/remotes/origin/ci_images
+│       │       ├── ./.git/refs/remotes/origin/docs_upd_2
+│       │       ├── ./.git/refs/remotes/origin/enable_gpu
+│       │       ├── ./.git/refs/remotes/origin/examples_update
+│       │       ├── ./.git/refs/remotes/origin/exllama-share
+│       │       ├── ./.git/refs/remotes/origin/gh-pages
+│       │       ├── ./.git/refs/remotes/origin/grpcresult
+│       │       ├── ./.git/refs/remotes/origin/img2vid
+│       │       ├── ./.git/refs/remotes/origin/mudler-patch-1
+│       │       ├── ./.git/refs/remotes/origin/mudler-patch-2
+│       │       ├── ./.git/refs/remotes/origin/remote_lib
+│       │       ├── ./.git/refs/remotes/origin/renovate
+│       │       │   ├── ./.git/refs/remotes/origin/renovate/github.com-ggerganov-whisper.cpp-bindings-go-digest
+│       │       │   ├── ./.git/refs/remotes/origin/renovate/github.com-google-uuid-1.x
+│       │       │   ├── ./.git/refs/remotes/origin/renovate/github.com-nomic-ai-gpt4all-gpt4all-bindings-golang-digest
+│       │       │   ├── ./.git/refs/remotes/origin/renovate/github.com-onsi-gomega-1.x
+│       │       │   └── ./.git/refs/remotes/origin/renovate/github.com-tmc-langchaingo-digest
+│       │       ├── ./.git/refs/remotes/origin/swagger
+│       │       ├── ./.git/refs/remotes/origin/swagger2
+│       │       ├── ./.git/refs/remotes/origin/token_berts
+│       │       └── ./.git/refs/remotes/origin/try_gha_runners
+│       └── ./.git/refs/tags
+│           ├── ./.git/refs/tags/v.1.24.0
+│           ├── ./.git/refs/tags/v0.1
+│           ├── ./.git/refs/tags/v0.10.0
+│           ├── ./.git/refs/tags/v0.2
+│           ├── ./.git/refs/tags/v0.3
+│           ├── ./.git/refs/tags/v0.4
+│           ├── ./.git/refs/tags/v0.5
+│           ├── ./.git/refs/tags/v0.6
+│           ├── ./.git/refs/tags/v0.7
+│           ├── ./.git/refs/tags/v0.8
+│           ├── ./.git/refs/tags/v0.8.1
+│           ├── ./.git/refs/tags/v0.9
+│           ├── ./.git/refs/tags/v0.9.1
+│           ├── ./.git/refs/tags/v0.9.2
+│           ├── ./.git/refs/tags/v1.0
+│           ├── ./.git/refs/tags/v1.1.0
+│           ├── ./.git/refs/tags/v1.10.0
+│           ├── ./.git/refs/tags/v1.10.1
+│           ├── ./.git/refs/tags/v1.11.0
+│           ├── ./.git/refs/tags/v1.11.1
+│           ├── ./.git/refs/tags/v1.12.0
+│           ├── ./.git/refs/tags/v1.13.0
+│           ├── ./.git/refs/tags/v1.14.0
+│           ├── ./.git/refs/tags/v1.14.1
+│           ├── ./.git/refs/tags/v1.14.2
+│           ├── ./.git/refs/tags/v1.15.0
+│           ├── ./.git/refs/tags/v1.16.0
+│           ├── ./.git/refs/tags/v1.17.0
+│           ├── ./.git/refs/tags/v1.17.1
+│           ├── ./.git/refs/tags/v1.18.0
+│           ├── ./.git/refs/tags/v1.19.0
+│           ├── ./.git/refs/tags/v1.19.1
+│           ├── ./.git/refs/tags/v1.19.2
+│           ├── ./.git/refs/tags/v1.2.0
+│           ├── ./.git/refs/tags/v1.20.0
+│           ├── ./.git/refs/tags/v1.20.1
+│           ├── ./.git/refs/tags/v1.21.0
+│           ├── ./.git/refs/tags/v1.22.0
+│           ├── ./.git/refs/tags/v1.23.0
+│           ├── ./.git/refs/tags/v1.23.1
+│           ├── ./.git/refs/tags/v1.23.2
+│           ├── ./.git/refs/tags/v1.24.1
+│           ├── ./.git/refs/tags/v1.25.0
+│           ├── ./.git/refs/tags/v1.3.0
+│           ├── ./.git/refs/tags/v1.3.1
+│           ├── ./.git/refs/tags/v1.3.2
+│           ├── ./.git/refs/tags/v1.30.0
+│           ├── ./.git/refs/tags/v1.4.0
+│           ├── ./.git/refs/tags/v1.40.0
+│           ├── ./.git/refs/tags/v1.5.0
+│           ├── ./.git/refs/tags/v1.5.1
+│           ├── ./.git/refs/tags/v1.6.0
+│           ├── ./.git/refs/tags/v1.6.1
+│           ├── ./.git/refs/tags/v1.6.2
+│           ├── ./.git/refs/tags/v1.6.3
+│           ├── ./.git/refs/tags/v1.7.0
+│           ├── ./.git/refs/tags/v1.7.1
+│           ├── ./.git/refs/tags/v1.8.0
+│           ├── ./.git/refs/tags/v1.8.1
+│           ├── ./.git/refs/tags/v1.9.0
+│           ├── ./.git/refs/tags/v1.9.1
+│           ├── ./.git/refs/tags/v2.0.0
+│           ├── ./.git/refs/tags/v2.0.0_beta
+│           ├── ./.git/refs/tags/v2.1.0
+│           ├── ./.git/refs/tags/v2.2.0
+│           ├── ./.git/refs/tags/v2.3.0
+│           ├── ./.git/refs/tags/v2.3.1
+│           ├── ./.git/refs/tags/v2.4.0
+│           ├── ./.git/refs/tags/v2.4.1
+│           ├── ./.git/refs/tags/v2.5.0
+│           ├── ./.git/refs/tags/v2.5.1
+│           ├── ./.git/refs/tags/v2.6.0
+│           └── ./.git/refs/tags/v2.6.1
+├── ./.gitattributes
+├── ./.github
+│   ├── ./.github/FUNDING.yml
+│   ├── ./.github/ISSUE_TEMPLATE
+│   │   ├── ./.github/ISSUE_TEMPLATE/bug_report.md
+│   │   ├── ./.github/ISSUE_TEMPLATE/config.yml
+│   │   └── ./.github/ISSUE_TEMPLATE/feature_request.md
+│   ├── ./.github/PULL_REQUEST_TEMPLATE.md
+│   ├── ./.github/bump_deps.sh
+│   ├── ./.github/bump_docs.sh
+│   ├── ./.github/release.yml
+│   ├── ./.github/stale.yml
+│   └── ./.github/workflows
+│       ├── ./.github/workflows/bump_deps.yaml
+│       ├── ./.github/workflows/bump_docs.yaml
+│       ├── ./.github/workflows/disabled
+│       │   └── ./.github/workflows/disabled/test-gpu.yml
+│       ├── ./.github/workflows/image-pr.yml
+│       ├── ./.github/workflows/image.yml
+│       ├── ./.github/workflows/image_build.yml
+│       ├── ./.github/workflows/release.yaml
+│       ├── ./.github/workflows/test-extra.yml
+│       └── ./.github/workflows/test.yml
+├── ./.gitignore
+├── ./.gitmodules
+├── ./.vscode
+│   └── ./.vscode/launch.json
+├── ./CONTRIBUTING.md
+├── ./Dockerfile
+├── ./Earthfile
+├── ./Entitlements.plist
+├── ./LICENSE
+├── ./Makefile
+├── ./README.md
+├── ./api
+│   ├── ./api/api.go
+│   ├── ./api/api_test.go
+│   ├── ./api/apt_suite_test.go
+│   ├── ./api/backend
+│   │   ├── ./api/backend/embeddings.go
+│   │   ├── ./api/backend/image.go
+│   │   ├── ./api/backend/llm.go
+│   │   ├── ./api/backend/options.go
+│   │   ├── ./api/backend/transcript.go
+│   │   └── ./api/backend/tts.go
+│   ├── ./api/config
+│   │   ├── ./api/config/config.go
+│   │   ├── ./api/config/config_test.go
+│   │   └── ./api/config/prediction.go
+│   ├── ./api/localai
+│   │   ├── ./api/localai/backend_monitor.go
+│   │   ├── ./api/localai/gallery.go
+│   │   └── ./api/localai/localai.go
+│   ├── ./api/openai
+│   │   ├── ./api/openai/chat.go
+│   │   ├── ./api/openai/completion.go
+│   │   ├── ./api/openai/edit.go
+│   │   ├── ./api/openai/embeddings.go
+│   │   ├── ./api/openai/image.go
+│   │   ├── ./api/openai/inference.go
+│   │   ├── ./api/openai/list.go
+│   │   ├── ./api/openai/request.go
+│   │   └── ./api/openai/transcription.go
+│   ├── ./api/options
+│   │   └── ./api/options/options.go
+│   └── ./api/schema
+│       ├── ./api/schema/openai.go
+│       └── ./api/schema/whisper.go
+├── ./assets.go
+├── ./backend
+│   ├── ./backend/backend.proto
+│   ├── ./backend/backend_grpc.pb.go
+│   ├── ./backend/cpp
+│   │   ├── ./backend/cpp/grpc
+│   │   │   ├── ./backend/cpp/grpc/.gitignore
+│   │   │   └── ./backend/cpp/grpc/Makefile
+│   │   └── ./backend/cpp/llama
+│   │       ├── ./backend/cpp/llama/CMakeLists.txt
+│   │       ├── ./backend/cpp/llama/Makefile
+│   │       ├── ./backend/cpp/llama/grpc-server.cpp
+│   │       └── ./backend/cpp/llama/json.hpp
+│   ├── ./backend/go
+│   │   ├── ./backend/go/image
+│   │   │   ├── ./backend/go/image/stablediffusion
+│   │   │   │   ├── ./backend/go/image/stablediffusion/main.go
+│   │   │   │   └── ./backend/go/image/stablediffusion/stablediffusion.go
+│   │   │   └── ./backend/go/image/tinydream
+│   │   │       ├── ./backend/go/image/tinydream/main.go
+│   │   │       └── ./backend/go/image/tinydream/tinydream.go
+│   │   ├── ./backend/go/llm
+│   │   │   ├── ./backend/go/llm/bert
+│   │   │   │   ├── ./backend/go/llm/bert/bert.go
+│   │   │   │   └── ./backend/go/llm/bert/main.go
+│   │   │   ├── ./backend/go/llm/dolly
+│   │   │   │   └── ./backend/go/llm/dolly/main.go
+│   │   │   ├── ./backend/go/llm/falcon-ggml
+│   │   │   │   └── ./backend/go/llm/falcon-ggml/main.go
+│   │   │   ├── ./backend/go/llm/gpt2
+│   │   │   │   └── ./backend/go/llm/gpt2/main.go
+│   │   │   ├── ./backend/go/llm/gpt4all
+│   │   │   │   ├── ./backend/go/llm/gpt4all/gpt4all.go
+│   │   │   │   └── ./backend/go/llm/gpt4all/main.go
+│   │   │   ├── ./backend/go/llm/gptj
+│   │   │   │   └── ./backend/go/llm/gptj/main.go
+│   │   │   ├── ./backend/go/llm/gptneox
+│   │   │   │   └── ./backend/go/llm/gptneox/main.go
+│   │   │   ├── ./backend/go/llm/langchain
+│   │   │   │   ├── ./backend/go/llm/langchain/langchain.go
+│   │   │   │   └── ./backend/go/llm/langchain/main.go
+│   │   │   ├── ./backend/go/llm/llama
+│   │   │   │   ├── ./backend/go/llm/llama/llama.go
+│   │   │   │   └── ./backend/go/llm/llama/main.go
+│   │   │   ├── ./backend/go/llm/llama-ggml
+│   │   │   │   ├── ./backend/go/llm/llama-ggml/llama.go
+│   │   │   │   └── ./backend/go/llm/llama-ggml/main.go
+│   │   │   ├── ./backend/go/llm/mpt
+│   │   │   │   └── ./backend/go/llm/mpt/main.go
+│   │   │   ├── ./backend/go/llm/replit
+│   │   │   │   └── ./backend/go/llm/replit/main.go
+│   │   │   ├── ./backend/go/llm/rwkv
+│   │   │   │   ├── ./backend/go/llm/rwkv/main.go
+│   │   │   │   └── ./backend/go/llm/rwkv/rwkv.go
+│   │   │   ├── ./backend/go/llm/starcoder
+│   │   │   │   └── ./backend/go/llm/starcoder/main.go
+│   │   │   └── ./backend/go/llm/transformers
+│   │   │       ├── ./backend/go/llm/transformers/dolly.go
+│   │   │       ├── ./backend/go/llm/transformers/falcon.go
+│   │   │       ├── ./backend/go/llm/transformers/gpt2.go
+│   │   │       ├── ./backend/go/llm/transformers/gptj.go
+│   │   │       ├── ./backend/go/llm/transformers/gptneox.go
+│   │   │       ├── ./backend/go/llm/transformers/mpt.go
+│   │   │       ├── ./backend/go/llm/transformers/predict.go
+│   │   │       ├── ./backend/go/llm/transformers/replit.go
+│   │   │       └── ./backend/go/llm/transformers/starcoder.go
+│   │   ├── ./backend/go/transcribe
+│   │   │   ├── ./backend/go/transcribe/main.go
+│   │   │   ├── ./backend/go/transcribe/transcript.go
+│   │   │   └── ./backend/go/transcribe/whisper.go
+│   │   └── ./backend/go/tts
+│   │       ├── ./backend/go/tts/main.go
+│   │       └── ./backend/go/tts/piper.go
+│   └── ./backend/python
+│       ├── ./backend/python/README.md
+│       ├── ./backend/python/autogptq
+│       │   ├── ./backend/python/autogptq/Makefile
+│       │   ├── ./backend/python/autogptq/README.md
+│       │   ├── ./backend/python/autogptq/autogptq.py
+│       │   ├── ./backend/python/autogptq/autogptq.yml
+│       │   ├── ./backend/python/autogptq/backend_pb2.py
+│       │   ├── ./backend/python/autogptq/backend_pb2_grpc.py
+│       │   └── ./backend/python/autogptq/run.sh
+│       ├── ./backend/python/bark
+│       │   ├── ./backend/python/bark/Makefile
+│       │   ├── ./backend/python/bark/README.md
+│       │   ├── ./backend/python/bark/backend_pb2.py
+│       │   ├── ./backend/python/bark/backend_pb2_grpc.py
+│       │   ├── ./backend/python/bark/run.sh
+│       │   ├── ./backend/python/bark/test.py
+│       │   ├── ./backend/python/bark/test.sh
+│       │   └── ./backend/python/bark/ttsbark.py
+│       ├── ./backend/python/common-env
+│       │   └── ./backend/python/common-env/transformers
+│       │       ├── ./backend/python/common-env/transformers/Makefile
+│       │       ├── ./backend/python/common-env/transformers/install.sh
+│       │       ├── ./backend/python/common-env/transformers/transformers-nvidia.yml
+│       │       └── ./backend/python/common-env/transformers/transformers.yml
+│       ├── ./backend/python/coqui
+│       │   ├── ./backend/python/coqui/Makefile
+│       │   ├── ./backend/python/coqui/README.md
+│       │   ├── ./backend/python/coqui/backend_pb2.py
+│       │   ├── ./backend/python/coqui/backend_pb2_grpc.py
+│       │   ├── ./backend/python/coqui/coqui_server.py
+│       │   ├── ./backend/python/coqui/run.sh
+│       │   ├── ./backend/python/coqui/test.py
+│       │   └── ./backend/python/coqui/test.sh
+│       ├── ./backend/python/diffusers
+│       │   ├── ./backend/python/diffusers/Makefile
+│       │   ├── ./backend/python/diffusers/README.md
+│       │   ├── ./backend/python/diffusers/backend_diffusers.py
+│       │   ├── ./backend/python/diffusers/backend_pb2.py
+│       │   ├── ./backend/python/diffusers/backend_pb2_grpc.py
+│       │   ├── ./backend/python/diffusers/diffusers.yml
+│       │   ├── ./backend/python/diffusers/run.sh
+│       │   ├── ./backend/python/diffusers/test.py
+│       │   └── ./backend/python/diffusers/test.sh
+│       ├── ./backend/python/exllama
+│       │   ├── ./backend/python/exllama/Makefile
+│       │   ├── ./backend/python/exllama/README.md
+│       │   ├── ./backend/python/exllama/backend_pb2.py
+│       │   ├── ./backend/python/exllama/backend_pb2_grpc.py
+│       │   ├── ./backend/python/exllama/exllama.py
+│       │   ├── ./backend/python/exllama/exllama.yml
+│       │   ├── ./backend/python/exllama/install.sh
+│       │   └── ./backend/python/exllama/run.sh
+│       ├── ./backend/python/exllama2
+│       │   ├── ./backend/python/exllama2/Makefile
+│       │   ├── ./backend/python/exllama2/backend_pb2.py
+│       │   ├── ./backend/python/exllama2/backend_pb2_grpc.py
+│       │   ├── ./backend/python/exllama2/exllama2.yml
+│       │   ├── ./backend/python/exllama2/exllama2_backend.py
+│       │   ├── ./backend/python/exllama2/install.sh
+│       │   └── ./backend/python/exllama2/run.sh
+│       ├── ./backend/python/mamba
+│       │   ├── ./backend/python/mamba/Makefile
+│       │   ├── ./backend/python/mamba/README.md
+│       │   ├── ./backend/python/mamba/backend_mamba.py
+│       │   ├── ./backend/python/mamba/backend_pb2.py
+│       │   ├── ./backend/python/mamba/backend_pb2_grpc.py
+│       │   ├── ./backend/python/mamba/install.sh
+│       │   ├── ./backend/python/mamba/run.sh
+│       │   ├── ./backend/python/mamba/test.sh
+│       │   └── ./backend/python/mamba/test_backend_mamba.py
+│       ├── ./backend/python/petals
+│       │   ├── ./backend/python/petals/Makefile
+│       │   ├── ./backend/python/petals/backend_pb2.py
+│       │   ├── ./backend/python/petals/backend_pb2_grpc.py
+│       │   ├── ./backend/python/petals/backend_petals.py
+│       │   ├── ./backend/python/petals/petals.yml
+│       │   ├── ./backend/python/petals/run.sh
+│       │   ├── ./backend/python/petals/test.sh
+│       │   └── ./backend/python/petals/test_petals.py
+│       ├── ./backend/python/sentencetransformers
+│       │   ├── ./backend/python/sentencetransformers/Makefile
+│       │   ├── ./backend/python/sentencetransformers/README.md
+│       │   ├── ./backend/python/sentencetransformers/backend_pb2.py
+│       │   ├── ./backend/python/sentencetransformers/backend_pb2_grpc.py
+│       │   ├── ./backend/python/sentencetransformers/run.sh
+│       │   ├── ./backend/python/sentencetransformers/sentencetransformers.py
+│       │   ├── ./backend/python/sentencetransformers/test.sh
+│       │   └── ./backend/python/sentencetransformers/test_sentencetransformers.py
+│       ├── ./backend/python/transformers
+│       │   ├── ./backend/python/transformers/Makefile
+│       │   ├── ./backend/python/transformers/README.md
+│       │   ├── ./backend/python/transformers/backend_pb2.py
+│       │   ├── ./backend/python/transformers/backend_pb2_grpc.py
+│       │   ├── ./backend/python/transformers/run.sh
+│       │   ├── ./backend/python/transformers/test.sh
+│       │   ├── ./backend/python/transformers/test_transformers_server.py
+│       │   └── ./backend/python/transformers/transformers_server.py
+│       ├── ./backend/python/transformers-musicgen
+│       │   ├── ./backend/python/transformers-musicgen/Makefile
+│       │   ├── ./backend/python/transformers-musicgen/README.md
+│       │   ├── ./backend/python/transformers-musicgen/backend_pb2.py
+│       │   ├── ./backend/python/transformers-musicgen/backend_pb2_grpc.py
+│       │   ├── ./backend/python/transformers-musicgen/run.sh
+│       │   ├── ./backend/python/transformers-musicgen/test.sh
+│       │   ├── ./backend/python/transformers-musicgen/test_transformers.py
+│       │   └── ./backend/python/transformers-musicgen/transformers_server.py
+│       ├── ./backend/python/vall-e-x
+│       │   ├── ./backend/python/vall-e-x/Makefile
+│       │   ├── ./backend/python/vall-e-x/README.md
+│       │   ├── ./backend/python/vall-e-x/backend_pb2.py
+│       │   ├── ./backend/python/vall-e-x/backend_pb2_grpc.py
+│       │   ├── ./backend/python/vall-e-x/install.sh
+│       │   ├── ./backend/python/vall-e-x/run.sh
+│       │   ├── ./backend/python/vall-e-x/test.py
+│       │   ├── ./backend/python/vall-e-x/test.sh
+│       │   ├── ./backend/python/vall-e-x/ttsvalle.py
+│       │   └── ./backend/python/vall-e-x/ttsvalle.yml
+│       └── ./backend/python/vllm
+│           ├── ./backend/python/vllm/Makefile
+│           ├── ./backend/python/vllm/README.md
+│           ├── ./backend/python/vllm/backend_pb2.py
+│           ├── ./backend/python/vllm/backend_pb2_grpc.py
+│           ├── ./backend/python/vllm/backend_vllm.py
+│           ├── ./backend/python/vllm/run.sh
+│           ├── ./backend/python/vllm/test.sh
+│           └── ./backend/python/vllm/test_backend_vllm.py
+├── ./custom-ca-certs
+│   └── ./custom-ca-certs/.keep
+├── ./docker-compose.yaml
+├── ./docs
+│   ├── ./docs/Dockerfile
+│   ├── ./docs/README.md
+│   ├── ./docs/assets
+│   │   └── ./docs/assets/jsconfig.json
+│   ├── ./docs/config.toml
+│   ├── ./docs/content
+│   │   └── ./docs/content/docs
+│   │       ├── ./docs/content/docs/advanced
+│   │       │   ├── ./docs/content/docs/advanced/_index.en.md
+│   │       │   ├── ./docs/content/docs/advanced/advanced-usage.md
+│   │       │   └── ./docs/content/docs/advanced/fine-tuning.md
+│   │       ├── ./docs/content/docs/faq.md
+│   │       ├── ./docs/content/docs/features
+│   │       │   ├── ./docs/content/docs/features/GPU-acceleration.md
+│   │       │   ├── ./docs/content/docs/features/_index.en.md
+│   │       │   ├── ./docs/content/docs/features/audio-to-text.md
+│   │       │   ├── ./docs/content/docs/features/constrained_grammars.md
+│   │       │   ├── ./docs/content/docs/features/embeddings.md
+│   │       │   ├── ./docs/content/docs/features/gpt-vision.md
+│   │       │   ├── ./docs/content/docs/features/image-generation.md
+│   │       │   ├── ./docs/content/docs/features/model-gallery.md
+│   │       │   ├── ./docs/content/docs/features/openai-functions.md
+│   │       │   ├── ./docs/content/docs/features/text-generation.md
+│   │       │   └── ./docs/content/docs/features/text-to-audio.md
+│   │       ├── ./docs/content/docs/getting-started
+│   │       │   ├── ./docs/content/docs/getting-started/_index.en.md
+│   │       │   ├── ./docs/content/docs/getting-started/build.md
+│   │       │   ├── ./docs/content/docs/getting-started/customize-model.md
+│   │       │   ├── ./docs/content/docs/getting-started/manual.md
+│   │       │   └── ./docs/content/docs/getting-started/quickstart.md
+│   │       ├── ./docs/content/docs/integrations.md
+│   │       ├── ./docs/content/docs/overview.md
+│   │       ├── ./docs/content/docs/reference
+│   │       │   ├── ./docs/content/docs/reference/_index.en.md
+│   │       │   └── ./docs/content/docs/reference/compatibility-table.md
+│   │       └── ./docs/content/docs/whats-new.md
+│   ├── ./docs/data
+│   │   ├── ./docs/data/landing.yaml
+│   │   └── ./docs/data/version.json
+│   ├── ./docs/docker-compose.yaml
+│   ├── ./docs/go.mod
+│   ├── ./docs/go.sum
+│   ├── ./docs/layouts
+│   │   ├── ./docs/layouts/404.html
+│   │   ├── ./docs/layouts/index.html
+│   │   ├── ./docs/layouts/partials
+│   │   │   ├── ./docs/layouts/partials/docs
+│   │   │   │   ├── ./docs/layouts/partials/docs/gitinfo.html
+│   │   │   │   └── ./docs/layouts/partials/docs/sidebar.html
+│   │   │   ├── ./docs/layouts/partials/head.html
+│   │   │   └── ./docs/layouts/partials/logo.html
+│   │   └── ./docs/layouts/shortcodes
+│   │       ├── ./docs/layouts/shortcodes/github.html
+│   │       ├── ./docs/layouts/shortcodes/pr.html
+│   │       └── ./docs/layouts/shortcodes/version.html
+│   ├── ./docs/netlify.toml
+│   ├── ./docs/package.json
+│   ├── ./docs/static
+│   │   ├── ./docs/static/android-chrome-192x192.png
+│   │   ├── ./docs/static/android-chrome-512x512.png
+│   │   ├── ./docs/static/apple-touch-icon.png
+│   │   ├── ./docs/static/favicon-16x16.png
+│   │   ├── ./docs/static/favicon-32x32.png
+│   │   └── ./docs/static/favicon.ico
+│   └── ./docs/themes
+│       ├── ./docs/themes/hugo-theme-relearn
+│       └── ./docs/themes/lotusdocs
+├── ./embedded
+│   ├── ./embedded/embedded.go
+│   ├── ./embedded/model_library.yaml
+│   └── ./embedded/models
+│       ├── ./embedded/models/all-minilm-l6-v2.yaml
+│       ├── ./embedded/models/animagine-xl.yaml
+│       ├── ./embedded/models/bark.yaml
+│       ├── ./embedded/models/bert-cpp.yaml
+│       ├── ./embedded/models/codellama-7b-gguf.yaml
+│       ├── ./embedded/models/codellama-7b.yaml
+│       ├── ./embedded/models/coqui.yaml
+│       ├── ./embedded/models/dolphin-2.5-mixtral-8x7b.yaml
+│       ├── ./embedded/models/llava.yaml
+│       ├── ./embedded/models/mamba-chat.yaml
+│       ├── ./embedded/models/mistral-openorca.yaml
+│       ├── ./embedded/models/mixtral-instruct.yaml
+│       ├── ./embedded/models/rhasspy-voice-en-us-amy.yaml
+│       ├── ./embedded/models/tinyllama-chat.yaml
+│       ├── ./embedded/models/transformers-tinyllama.yaml
+│       ├── ./embedded/models/vall-e-x.yaml
+│       └── ./embedded/models/whisper-base.yaml
+├── ./entrypoint.sh
+├── ./examples
+│   ├── ./examples/README.md
+│   ├── ./examples/autoGPT
+│   │   ├── ./examples/autoGPT/.env.example
+│   │   ├── ./examples/autoGPT/README.md
+│   │   └── ./examples/autoGPT/docker-compose.yaml
+│   ├── ./examples/bruno
+│   │   └── ./examples/bruno/LocalAI Test Requests
+│   │       ├── ./examples/bruno/LocalAI Test Requests/backend monitor
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/backend monitor/backend monitor.bru
+│   │       │   └── ./examples/bruno/LocalAI Test Requests/backend monitor/backend-shutdown.bru
+│   │       ├── ./examples/bruno/LocalAI Test Requests/bruno.json
+│   │       ├── ./examples/bruno/LocalAI Test Requests/environments
+│   │       │   └── ./examples/bruno/LocalAI Test Requests/environments/localhost.bru
+│   │       ├── ./examples/bruno/LocalAI Test Requests/get models list.bru
+│   │       ├── ./examples/bruno/LocalAI Test Requests/image generation
+│   │       │   └── ./examples/bruno/LocalAI Test Requests/image generation/Generate image.bru
+│   │       ├── ./examples/bruno/LocalAI Test Requests/llm text
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/llm text/-completions.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/llm text/-edits.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/llm text/-embeddings.bru
+│   │       │   └── ./examples/bruno/LocalAI Test Requests/llm text/chat
+│   │       │       ├── ./examples/bruno/LocalAI Test Requests/llm text/chat/chat completion -simple- 1 message-.bru
+│   │       │       ├── ./examples/bruno/LocalAI Test Requests/llm text/chat/chat-completions -long-.bru
+│   │       │       └── ./examples/bruno/LocalAI Test Requests/llm text/chat/chat-completions -stream-.bru
+│   │       ├── ./examples/bruno/LocalAI Test Requests/model gallery
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/model gallery/add model gallery.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/model gallery/delete model gallery.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/model gallery/list MODELS in galleries.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/model gallery/list model GALLERIES.bru
+│   │       │   ├── ./examples/bruno/LocalAI Test Requests/model gallery/model gallery apply -gist-.bru
+│   │       │   └── ./examples/bruno/LocalAI Test Requests/model gallery/model gallery apply.bru
+│   │       └── ./examples/bruno/LocalAI Test Requests/tts
+│   │           ├── ./examples/bruno/LocalAI Test Requests/tts/-tts.bru
+│   │           └── ./examples/bruno/LocalAI Test Requests/tts/musicgen.bru
+│   ├── ./examples/chainlit
+│   │   ├── ./examples/chainlit/Dockerfile
+│   │   ├── ./examples/chainlit/README.md
+│   │   ├── ./examples/chainlit/config.yaml
+│   │   ├── ./examples/chainlit/main.py
+│   │   └── ./examples/chainlit/requirements.txt
+│   ├── ./examples/chatbot-ui
+│   │   ├── ./examples/chatbot-ui/README.md
+│   │   └── ./examples/chatbot-ui/docker-compose.yaml
+│   ├── ./examples/chatbot-ui-manual
+│   │   ├── ./examples/chatbot-ui-manual/README.md
+│   │   ├── ./examples/chatbot-ui-manual/docker-compose.yaml
+│   │   └── ./examples/chatbot-ui-manual/models -> ../models
+│   ├── ./examples/configurations
+│   │   ├── ./examples/configurations/README.md
+│   │   ├── ./examples/configurations/llava
+│   │   │   ├── ./examples/configurations/llava/chat-simple.tmpl
+│   │   │   └── ./examples/configurations/llava/llava.yaml
+│   │   ├── ./examples/configurations/mistral
+│   │   │   ├── ./examples/configurations/mistral/chatml-block.tmpl
+│   │   │   ├── ./examples/configurations/mistral/chatml.tmpl
+│   │   │   ├── ./examples/configurations/mistral/completion.tmpl
+│   │   │   └── ./examples/configurations/mistral/mistral.yaml
+│   │   ├── ./examples/configurations/mixtral
+│   │   │   ├── ./examples/configurations/mixtral/mixtral
+│   │   │   ├── ./examples/configurations/mixtral/mixtral-chat
+│   │   │   └── ./examples/configurations/mixtral/mixtral.yaml
+│   │   └── ./examples/configurations/phi-2.yaml
+│   ├── ./examples/continue
+│   │   ├── ./examples/continue/README.md
+│   │   ├── ./examples/continue/config.py
+│   │   ├── ./examples/continue/docker-compose.yml
+│   │   └── ./examples/continue/img
+│   │       └── ./examples/continue/img/screen.png
+│   ├── ./examples/discord-bot
+│   │   ├── ./examples/discord-bot/.env.example
+│   │   ├── ./examples/discord-bot/README.md
+│   │   ├── ./examples/discord-bot/docker-compose.yaml
+│   │   └── ./examples/discord-bot/models -> ../models
+│   ├── ./examples/e2e-fine-tuning
+│   │   ├── ./examples/e2e-fine-tuning/README.md
+│   │   ├── ./examples/e2e-fine-tuning/axolotl.yaml
+│   │   └── ./examples/e2e-fine-tuning/notebook.ipynb
+│   ├── ./examples/flowise
+│   │   ├── ./examples/flowise/README.md
+│   │   └── ./examples/flowise/docker-compose.yaml
+│   ├── ./examples/functions
+│   │   ├── ./examples/functions/.env.example
+│   │   ├── ./examples/functions/Dockerfile
+│   │   ├── ./examples/functions/README.md
+│   │   ├── ./examples/functions/docker-compose.yaml
+│   │   ├── ./examples/functions/functions-openai.py
+│   │   └── ./examples/functions/requirements.txt
+│   ├── ./examples/insomnia
+│   │   ├── ./examples/insomnia/Insomnia_LocalAI.json
+│   │   └── ./examples/insomnia/README.md
+│   ├── ./examples/k8sgpt
+│   │   ├── ./examples/k8sgpt/README.md
+│   │   ├── ./examples/k8sgpt/broken-pod.yaml
+│   │   └── ./examples/k8sgpt/values.yaml
+│   ├── ./examples/langchain
+│   │   ├── ./examples/langchain/.gitignore
+│   │   ├── ./examples/langchain/JS.Dockerfile
+│   │   ├── ./examples/langchain/PY.Dockerfile
+│   │   ├── ./examples/langchain/README.md
+│   │   ├── ./examples/langchain/docker-compose.yaml
+│   │   ├── ./examples/langchain/langchainjs-localai-example
+│   │   │   ├── ./examples/langchain/langchainjs-localai-example/.gitignore
+│   │   │   ├── ./examples/langchain/langchainjs-localai-example/.vscode
+│   │   │   │   └── ./examples/langchain/langchainjs-localai-example/.vscode/launch.json
+│   │   │   ├── ./examples/langchain/langchainjs-localai-example/package-lock.json
+│   │   │   ├── ./examples/langchain/langchainjs-localai-example/package.json
+│   │   │   ├── ./examples/langchain/langchainjs-localai-example/src
+│   │   │   │   └── ./examples/langchain/langchainjs-localai-example/src/index.mts
+│   │   │   └── ./examples/langchain/langchainjs-localai-example/tsconfig.json
+│   │   ├── ./examples/langchain/langchainpy-localai-example
+│   │   │   ├── ./examples/langchain/langchainpy-localai-example/.vscode
+│   │   │   │   ├── ./examples/langchain/langchainpy-localai-example/.vscode/launch.json
+│   │   │   │   └── ./examples/langchain/langchainpy-localai-example/.vscode/settings.json
+│   │   │   ├── ./examples/langchain/langchainpy-localai-example/full_demo.py
+│   │   │   ├── ./examples/langchain/langchainpy-localai-example/requirements.txt
+│   │   │   └── ./examples/langchain/langchainpy-localai-example/simple_demo.py
+│   │   └── ./examples/langchain/models -> ../models
+│   ├── ./examples/langchain-chroma
+│   │   ├── ./examples/langchain-chroma/.env.example
+│   │   ├── ./examples/langchain-chroma/.gitignore
+│   │   ├── ./examples/langchain-chroma/README.md
+│   │   ├── ./examples/langchain-chroma/docker-compose.yml
+│   │   ├── ./examples/langchain-chroma/models -> ../models
+│   │   ├── ./examples/langchain-chroma/query.py
+│   │   ├── ./examples/langchain-chroma/requirements.txt
+│   │   └── ./examples/langchain-chroma/store.py
+│   ├── ./examples/langchain-huggingface
+│   │   ├── ./examples/langchain-huggingface/README.md
+│   │   ├── ./examples/langchain-huggingface/docker-compose.yml
+│   │   └── ./examples/langchain-huggingface/models -> ../models
+│   ├── ./examples/langchain-python
+│   │   ├── ./examples/langchain-python/README.md
+│   │   ├── ./examples/langchain-python/agent.py
+│   │   ├── ./examples/langchain-python/docker-compose.yaml
+│   │   └── ./examples/langchain-python/test.py
+│   ├── ./examples/llamaindex
+│   │   ├── ./examples/llamaindex/README.md
+│   │   └── ./examples/llamaindex/main.py
+│   ├── ./examples/localai-webui
+│   │   ├── ./examples/localai-webui/README.md
+│   │   └── ./examples/localai-webui/docker-compose.yml
+│   ├── ./examples/models
+│   │   ├── ./examples/models/.gitignore
+│   │   ├── ./examples/models/completion.tmpl
+│   │   ├── ./examples/models/embeddings.yaml
+│   │   ├── ./examples/models/gpt-3.5-turbo.yaml
+│   │   └── ./examples/models/gpt4all.tmpl
+│   ├── ./examples/privateGPT
+│   │   └── ./examples/privateGPT/README.md
+│   ├── ./examples/query_data
+│   │   ├── ./examples/query_data/.gitignore
+│   │   ├── ./examples/query_data/README.md
+│   │   ├── ./examples/query_data/data
+│   │   │   └── ./examples/query_data/data/.keep
+│   │   ├── ./examples/query_data/docker-compose.yml
+│   │   ├── ./examples/query_data/models -> ../models
+│   │   ├── ./examples/query_data/query.py
+│   │   ├── ./examples/query_data/store.py
+│   │   └── ./examples/query_data/update.py
+│   ├── ./examples/rwkv
+│   │   ├── ./examples/rwkv/.gitignore
+│   │   ├── ./examples/rwkv/Dockerfile.build
+│   │   ├── ./examples/rwkv/README.md
+│   │   ├── ./examples/rwkv/docker-compose.yaml
+│   │   ├── ./examples/rwkv/models
+│   │   │   ├── ./examples/rwkv/models/gpt-3.5-turbo.yaml
+│   │   │   ├── ./examples/rwkv/models/rwkv_chat.tmpl
+│   │   │   └── ./examples/rwkv/models/rwkv_completion.tmpl
+│   │   └── ./examples/rwkv/scripts
+│   │       └── ./examples/rwkv/scripts/build.sh
+│   ├── ./examples/slack-bot
+│   │   ├── ./examples/slack-bot/.env.example
+│   │   ├── ./examples/slack-bot/README.md
+│   │   ├── ./examples/slack-bot/docker-compose.yaml
+│   │   └── ./examples/slack-bot/models -> ../models
+│   ├── ./examples/slack-qa-bot
+│   │   ├── ./examples/slack-qa-bot/.env.example
+│   │   ├── ./examples/slack-qa-bot/README.md
+│   │   ├── ./examples/slack-qa-bot/deployment.yaml
+│   │   └── ./examples/slack-qa-bot/docker-compose.yml
+│   ├── ./examples/streamlit-bot
+│   │   ├── ./examples/streamlit-bot/.gitignore
+│   │   ├── ./examples/streamlit-bot/LICENSE
+│   │   ├── ./examples/streamlit-bot/Main.py
+│   │   ├── ./examples/streamlit-bot/README.md
+│   │   ├── ./examples/streamlit-bot/cmd_windows.bat
+│   │   ├── ./examples/streamlit-bot/install_requirements.bat
+│   │   ├── ./examples/streamlit-bot/requirements.txt
+│   │   ├── ./examples/streamlit-bot/start_windows.bat
+│   │   └── ./examples/streamlit-bot/streamlit-bot.png
+│   └── ./examples/telegram-bot
+│       ├── ./examples/telegram-bot/README.md
+│       └── ./examples/telegram-bot/docker-compose.yml
+├── ./go.mod
+├── ./go.sum
+├── ./internal
+│   └── ./internal/version.go
+├── ./main.go
+├── ./metrics
+│   └── ./metrics/metrics.go
+├── ./models
+│   └── ./models/.keep
+├── ./pkg
+│   ├── ./pkg/assets
+│   │   ├── ./pkg/assets/extract.go
+│   │   └── ./pkg/assets/list.go
+│   ├── ./pkg/downloader
+│   │   ├── ./pkg/downloader/progress.go
+│   │   ├── ./pkg/downloader/uri.go
+│   │   └── ./pkg/downloader/uri_test.go
+│   ├── ./pkg/gallery
+│   │   ├── ./pkg/gallery/gallery.go
+│   │   ├── ./pkg/gallery/gallery_suite_test.go
+│   │   ├── ./pkg/gallery/models.go
+│   │   ├── ./pkg/gallery/models_test.go
+│   │   ├── ./pkg/gallery/request.go
+│   │   └── ./pkg/gallery/request_test.go
+│   ├── ./pkg/grammar
+│   │   ├── ./pkg/grammar/functions.go
+│   │   ├── ./pkg/grammar/functions_test.go
+│   │   ├── ./pkg/grammar/grammar_suite_test.go
+│   │   ├── ./pkg/grammar/json_schema.go
+│   │   └── ./pkg/grammar/json_schema_test.go
+│   ├── ./pkg/grpc
+│   │   ├── ./pkg/grpc/backend.go
+│   │   ├── ./pkg/grpc/base
+│   │   │   ├── ./pkg/grpc/base/base.go
+│   │   │   └── ./pkg/grpc/base/singlethread.go
+│   │   ├── ./pkg/grpc/client.go
+│   │   ├── ./pkg/grpc/embed.go
+│   │   ├── ./pkg/grpc/interface.go
+│   │   ├── ./pkg/grpc/proto
+│   │   │   ├── ./pkg/grpc/proto/backend.pb.go
+│   │   │   └── ./pkg/grpc/proto/backend_grpc.pb.go
+│   │   └── ./pkg/grpc/server.go
+│   ├── ./pkg/langchain
+│   │   ├── ./pkg/langchain/huggingface.go
+│   │   └── ./pkg/langchain/langchain.go
+│   ├── ./pkg/model
+│   │   ├── ./pkg/model/initializers.go
+│   │   ├── ./pkg/model/loader.go
+│   │   ├── ./pkg/model/options.go
+│   │   ├── ./pkg/model/process.go
+│   │   └── ./pkg/model/watchdog.go
+│   ├── ./pkg/stablediffusion
+│   │   ├── ./pkg/stablediffusion/generate.go
+│   │   ├── ./pkg/stablediffusion/generate_unsupported.go
+│   │   └── ./pkg/stablediffusion/stablediffusion.go
+│   ├── ./pkg/startup
+│   │   ├── ./pkg/startup/model_preload.go
+│   │   ├── ./pkg/startup/model_preload_test.go
+│   │   └── ./pkg/startup/startup_suite_test.go
+│   ├── ./pkg/tinydream
+│   │   ├── ./pkg/tinydream/generate.go
+│   │   ├── ./pkg/tinydream/generate_unsupported.go
+│   │   └── ./pkg/tinydream/tinydream.go
+│   └── ./pkg/utils
+│       ├── ./pkg/utils/hash.go
+│       ├── ./pkg/utils/json.go
+│       ├── ./pkg/utils/logging.go
+│       ├── ./pkg/utils/path.go
+│       ├── ./pkg/utils/untar.go
+│       └── ./pkg/utils/utils_suite_test.go
+├── ./prompt-templates
+│   ├── ./prompt-templates/alpaca.tmpl
+│   ├── ./prompt-templates/getting_started.tmpl
+│   ├── ./prompt-templates/ggml-gpt4all-j.tmpl
+│   ├── ./prompt-templates/koala.tmpl
+│   ├── ./prompt-templates/llama2-chat-message.tmpl
+│   ├── ./prompt-templates/vicuna.tmpl
+│   └── ./prompt-templates/wizardlm.tmpl
+├── ./renovate.json
+├── ./tests
+│   ├── ./tests/e2e
+│   │   ├── ./tests/e2e/e2e_suite_test.go
+│   │   └── ./tests/e2e/e2e_test.go
+│   ├── ./tests/e2e-fixtures
+│   │   └── ./tests/e2e-fixtures/gpu.yaml
+│   ├── ./tests/fixtures
+│   │   └── ./tests/fixtures/gallery_simple.yaml
+│   ├── ./tests/integration
+│   │   └── ./tests/integration/reflect_test.go
+│   └── ./tests/models_fixtures
+│       ├── ./tests/models_fixtures/completion.tmpl
+│       ├── ./tests/models_fixtures/config.yaml
+│       ├── ./tests/models_fixtures/embeddings.yaml
+│       ├── ./tests/models_fixtures/ggml-gpt4all-j.tmpl
+│       ├── ./tests/models_fixtures/gpt4.yaml
+│       ├── ./tests/models_fixtures/gpt4_2.yaml
+│       ├── ./tests/models_fixtures/grpc.yaml
+│       ├── ./tests/models_fixtures/rwkv.yaml
+│       ├── ./tests/models_fixtures/rwkv_chat.tmpl
+│       ├── ./tests/models_fixtures/rwkv_completion.tmpl
+│       └── ./tests/models_fixtures/whisper.yaml
+└── ./tree_20240127_212831.txt
+
+176 directories, 653 files

@@ -1,0 +1,1 @@
+tree -a -l -p -u -g -d -h -F --timefmt "%Y-%m-%d %H:%M:%S" > tree.txt

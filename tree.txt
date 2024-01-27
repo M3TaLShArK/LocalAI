@@ -1,0 +1,179 @@
+.
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  .git
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:09]  branches
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:11]  hooks
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:09]  info
+│   ├── [drwxr-xr-x codespace codespace 4.0K 2024-01-27 21:07:21]  lfs
+│   │   └── [drwxr-xr-x codespace codespace 4.0K 2024-01-27 21:07:21]  tmp
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  logs
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  refs
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  heads
+│   │       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  remotes
+│   │           └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  origin
+│   │               ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  add
+│   │               └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  renovate
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  objects
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:09]  info
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  pack
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  refs
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  heads
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  remotes
+│       │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  origin
+│       │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  add
+│       │       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  renovate
+│       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:23]  tags
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  .github
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  ISSUE_TEMPLATE
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  workflows
+│       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  disabled
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  .vscode
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  api
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  backend
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  config
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  localai
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  openai
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  options
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  schema
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  backend
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  cpp
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  grpc
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llama
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  go
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  image
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  stablediffusion
+│   │   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  tinydream
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llm
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  bert
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  dolly
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  falcon-ggml
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  gpt2
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  gpt4all
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  gptj
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  gptneox
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llama
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llama-ggml
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  mpt
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  replit
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  rwkv
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  starcoder
+│   │   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  transformers
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  transcribe
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  tts
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  python
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  autogptq
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  bark
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  common-env
+│       │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  transformers
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  coqui
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  diffusers
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  exllama
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  exllama2
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  mamba
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  petals
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  sentencetransformers
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  transformers
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  transformers-musicgen
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  vall-e-x
+│       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  vllm
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  custom-ca-certs
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  docs
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  assets
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  content
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  docs
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  advanced
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  features
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  getting-started
+│   │       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  reference
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  data
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  layouts
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  partials
+│   │   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  docs
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  shortcodes
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  static
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  themes
+│       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  hugo-theme-relearn
+│       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  lotusdocs
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  embedded
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  models
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  examples
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  autoGPT
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  bruno
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  LocalAI Test Requests
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  backend monitor
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  environments
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  image generation
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llm text
+│   │       │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  chat
+│   │       ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  model gallery
+│   │       └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  tts
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  chainlit
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  chatbot-ui
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  chatbot-ui-manual
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  configurations
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llava
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  mistral
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  mixtral
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  continue
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  img
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  discord-bot
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  e2e-fine-tuning
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  flowise
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  functions
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  insomnia
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  k8sgpt
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchainjs-localai-example
+│   │   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  .vscode
+│   │   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  src
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchainpy-localai-example
+│   │   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  .vscode
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain-chroma
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain-huggingface
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain-python
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  llamaindex
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  localai-webui
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  models
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  privateGPT
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  query_data
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  data
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  rwkv
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  models
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  scripts
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  slack-bot
+│   │   └── [lrwxrwxrwx codespace root        9 2024-01-27 21:07:10]  models -> ../models  [recursive, not followed]
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  slack-qa-bot
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  streamlit-bot
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  telegram-bot
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  internal
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  metrics
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  models
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  pkg
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  assets
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  downloader
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  gallery
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  grammar
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  grpc
+│   │   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  base
+│   │   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  proto
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  langchain
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  model
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  stablediffusion
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  startup
+│   ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  tinydream
+│   └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  utils
+├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  prompt-templates
+└── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  tests
+    ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  e2e
+    ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  e2e-fixtures
+    ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  fixtures
+    ├── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  integration
+    └── [drwxrwxrwx codespace root     4.0K 2024-01-27 21:07:10]  models_fixtures
+
+176 directories
